@@ -21,5 +21,10 @@
     "hardhat-gas-reporter": "^1.0.8",
     "solidity-coverage": "^0.7.21",
     "typechain": "^8.1.0"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "^0.4.2",
+    "@openzeppelin/contracts": "^4.7.3",
+    "dotenv-extended": "^2.9.0"
   }
 }
