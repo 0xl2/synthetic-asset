@@ -10,12 +10,12 @@ module.exports = {
   networks: {
     hardhat: {
       allowUnlimitedContractSize: true,
-      chainId: 1337,
-      // forking: {
-      //   enabled: true,
-      //   url: `https://mainnet.infura.io/v3/${process.env.INFURA_MAINNET_KEY}`,
-      //   // blockNumber: 19717000,
-      // }
+      chainId: 31337,
+      forking: {
+        enabled: true,
+        url: `https://eth-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_MAINNET_KEY}`,
+        // blockNumber: 19717000,
+      }
     },
     mainnet: {
       chainId: 1,

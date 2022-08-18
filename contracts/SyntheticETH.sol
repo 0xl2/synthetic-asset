@@ -106,11 +106,11 @@ contract SyntheticETH is Ownable, ReentrancyGuard {
         require(amount > 0, "Invalid amount");
         
         uint256 withdrawAmount = getWithdrawAmount(amount);
-        if(withdrawAmount > userInfo[msg.sender]) {
-            withdrawAmount = userInfo[msg.sender];
-        }
+        if(withdrawAmount > userInfo[msg.sender]) withdrawAmount = userInfo[msg.sender];
 
         userInfo[msg.sender] -= withdrawAmount;
+
+        sToken.burn(msg.sender, amount);
 
         payable(msg.sender).transfer(withdrawAmount);
 
